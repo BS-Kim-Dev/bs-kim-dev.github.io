@@ -31,7 +31,7 @@ hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg.
 # Experiences
 author_work_experiences:
             - company_name: 현대자동차 남양연구소
-              company_logo: GV60.jpg
+              company_logo: Hyundai.png
               company_url: https://www.hyundai.com/
               designation: 연구원
               description: 자율주행(자율주차) 양산 설계 및 개발 
@@ -40,7 +40,7 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: PNU.jpeg
+              - college_logo: PNU.png
                 college_name: 부산대학교
                 college_url: https://www.pusan.ac.kr/
                 college_degree: 기계공학 학사
