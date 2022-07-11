@@ -3,7 +3,7 @@ name: BS-Kim
 username: BS-Kim-Dev
 bio: "BS-Kim's Devlog & Portfolio"
 site: https://bs-kim-dev.github.io/
-avatar: IMG_6120.jpeg
+avatar: mimoticon.png
 email: bumsi0426@gmail.com
 social:
     - title: "github"
