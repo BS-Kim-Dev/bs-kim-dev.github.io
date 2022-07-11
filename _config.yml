@@ -43,8 +43,8 @@ author_education_details:
               - college_logo: PNU.png
                 college_name: 부산대학교
                 college_url: https://www.pusan.ac.kr/
-                college_degree: 기계공학
-                description: 학사
+                college_degree: 기계공학 학사
+                description: 제어 자동화 시스템 전공 / 차량 동역학 연구실 학부연구생
                 visibility: true
 
 # Projects
