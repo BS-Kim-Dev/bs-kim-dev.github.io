@@ -31,7 +31,7 @@ hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg.
 
 # Experiences
 author_work_experiences:
-            - company_name: Hyundai Motor Company
+            - company_name: Hyundai Motor Company (2018. 7. ~)
               company_logo: Hyundai.png
               company_url: https://www.hyundai.com/
               designation: Research Engineer
