@@ -12,10 +12,10 @@ urls:
       url: /
     - text: About
       url: /about
-    - text: Blog
-      url: /blog
-    - text: Github
-      url: /Github
+    - text: Devlog
+      url: /Devlog
+    - text: Portfolio
+      url: /Portfolio
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
