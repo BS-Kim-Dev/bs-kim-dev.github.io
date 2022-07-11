@@ -35,7 +35,11 @@ author_work_experiences:
               company_logo: Hyundai.png
               company_url: https://www.hyundai.com/
               designation: Research Engineer
-              description: 자율주행(자율주차) 양산 설계 및 개발\n GV60 자율주차 시스템 양산 설계\n - 자율주차 통합제어기 및 센서 HW/SW 요구사양 도출\n - 서라운드 뷰 모니터 SW 요구사양 도출\n - 초음파센서 신호처리/인식 로직 개발 (C++, ML/DL) 
+              description: 자율주행(자율주차) 양산 설계 및 개발
+              description:   - GV60 자율주차 시스템 양산 설계
+              description:   - 자율주차 통합제어기 및 센서 HW/SW 요구사양 도출
+              description:   - 서라운드 뷰 모니터 SW 요구사양 도출
+              description:   - 초음파센서 신호처리/인식 로직 개발 (C++, Python/Pytorch) 
               visibility: true
 
 
