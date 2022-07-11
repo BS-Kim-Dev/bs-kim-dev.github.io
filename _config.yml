@@ -50,23 +50,11 @@ author_education_details:
 
 # Projects
 author_project_details:
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: false
-
-# social links
-twitter_username: johndoe
-github_username:  BS-Kim-Dev
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+              - project_thumbnail: DAT.jpg
+                project_title: Data Algorithmic Trading Lab
+                project_description: 모두의 연구소
+                project_url: https://modulabs.co.kr/
+                visibility: true
 
 
 # syntax highlighter
