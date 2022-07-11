@@ -20,7 +20,7 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: /authors/mimoticon.jpeg
+author_logo: /authors/mimoticon.png
 author: BS-Kim
 author_bio: I'm learning SW Development.
 author_email: "bumsi0426@gmail.com"
