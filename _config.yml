@@ -42,10 +42,10 @@ author_work_experiences:
 # Education
 author_education_details:
               - college_logo: PNU.png
-                college_name: Pusan National University
+                college_name: 부산대학교
                 college_url: https://www.pusan.ac.kr/
-                college_degree: Mechanical Engineer
-                description: Bachelor of Technology
+                college_degree: 기계공학
+                description: 학사
                 visibility: true
 
 # Projects
