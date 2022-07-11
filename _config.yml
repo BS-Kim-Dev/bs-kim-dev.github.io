@@ -26,20 +26,16 @@ author_bio: I'm learning SW Development.
 author_email: "bumsi0426@gmail.com"
 author_location: Seoul, Republic of Korea
 author_website_url: "https://github.com/bs-kim-dev"
-typewrite-text: Devlog & Portfolio. Still writing...
+typewrite-text: Devlog & Portfolio...
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
-            - company_name: Hyundai Motor Company (2018. 7. ~)
+            - company_name: 현대자동차 남양연구소
               company_logo: Hyundai.png
               company_url: https://www.hyundai.com/
-              designation: Research Engineer
-              description: 자율주행(자율주차) 양산 설계 및 개발
-              description:   - GV60 자율주차 시스템 양산 설계
-              description:   - 자율주차 통합제어기 및 센서 HW/SW 요구사양 도출
-              description:   - 서라운드 뷰 모니터 SW 요구사양 도출
-              description:   - 초음파센서 신호처리/인식 로직 개발 (C++, Python/Pytorch) 
+              designation: 연구원
+              description: 자율주행(자율주차) 양산 설계 및 개발 
               visibility: true
 
 
