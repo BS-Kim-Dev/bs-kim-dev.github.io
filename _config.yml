@@ -14,6 +14,8 @@ urls:
       url: /about
     - text: Blog
       url: /blog
+    - text: Github
+      url: /Github
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
@@ -23,24 +25,19 @@ author: BS-Kim
 author_bio: I'm learning SW Development.
 author_email: "bumsi0426@gmail.com"
 author_location: Seoul, Republic of Korea
-author_website_url: "https://bs-kim-dev.github.io/"
+author_website_url: "https://github.com/bs-kim-dev"
 typewrite-text: Devlog & Portfolio. Still writing...
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
+            - company_name: Hyundai Motor Company
+              company_logo: Hyundai.png
+              company_url: https://www.hyundai.com/
+              designation: Research Engineer
+              description: Worked on Autonomous Parking Engineering Design
               visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
+
 
 # Education
 author_education_details:
@@ -49,24 +46,19 @@ author_education_details:
                 college_url: https://mit.org
                 college_degree: CS Engineer
                 description: Bachelor of Technology
-                visibility: true
+                visibility: false
 
 # Projects
 author_project_details:
-              - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
-                visibility: true
               - project_thumbnail: hack4r.PNG
                 project_title: Hack4r
                 project_description: A Platform built for Hackers and Penetration Testers
                 project_url: https://hack4r.com
-                visibility: true
+                visibility: false
 
 # social links
 twitter_username: johndoe
-github_username:  sujaykundu777
+github_username:  BS-Kim-Dev
 facebook_username: johndoe
 linkedin_username: johndoe
 behance_username: johndoe
