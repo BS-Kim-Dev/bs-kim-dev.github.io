@@ -50,8 +50,8 @@ author_education_details:
 # Projects
 author_project_details:
               - project_thumbnail: DAT.jpg
-                project_title: Data Algorithmic Trading Lab
-                project_description: 모두의 연구소
+                project_title: 모두의 연구소 DAT Lab
+                project_description: 알고리즘 및 시스템 트레이딩 with ML / DL / RL
                 project_url: https://modulabs.co.kr/
                 visibility: true
 
