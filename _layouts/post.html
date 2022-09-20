@@ -5,7 +5,13 @@ layout: default
 <div class="row justify-content-center" id="blog-post-container">
   <div class="col-lg-10">
     {%- include blog_post_article.html -%}
-     {%- include blog_post_comments.html-%}
+    <script src="https://utteranc.es/client.js"
+        repo="BS-Kim-Dev/blog-comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
   </div>
 </div>
 <div class="row">
