@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BS-Kim</title>
+    <description>devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.</description>
+    <link>https://bs-kim-dev.github.io//</link>
+    <atom:link href="https://bs-kim-dev.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 20 Sep 2022 15:31:32 +0000</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2022 15:31:32 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+
+    
+      <item>
+        <title>객체 지향에 대해</title>
+        <description>&lt;h6 id=&quot;photo-by-blake-connally-on-unsplash&quot;&gt;Photo by &lt;a href=&quot;https://unsplash.com/@blakeconnally?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Blake Connally&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/programming?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;객체-지향object-oriented-programming이란&quot;&gt;객체 지향(Object Oriented Programming)이란?&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;요즘 C++ 문법 공부를 하며 객체 지향에 대해서 공부하고 있는데, 이 개념이 정말 재미있다. 실제로 사람이 사고하는 방식을 본따 만들었다고 들은 것 같기도 한데, (그래서 절차 지향 프로그래밍에 비해 좀 더 직관적인 프로그래밍이 가능하다고 한다) 어떤 객체의 속성들을 정의하고(멤버 변수) 그 객체가 할 수 있는 행동(멤버 함수)를 정의해 묶어서 관리하겠다는 것이다. 그리고 그렇게 객체를 정의한 덕에, 비슷한 속성을 가진 다양한 인스턴스들 또는 새로운 객체를 만들어 낼 수 있어 코드의 재사용성과 가독성 등이 높아지고 결국 생산성이 향상된다고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+객체 지향 프로그래밍의 특성을 흔히 “캡슐화”, “상속성”, “다형성”, “추상화” 라고 한다. 각각의 특징을 간단히 요약하면 아래와 같다고 한다.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 캡슐화 (Encapsulation)
+  - 객체의 멤버 데이터를 private 영역에 놓고, public 멤버 함수를 통해서 접근하는 것.
+  - 실제로 처리되는 데이터 부분을 외부에 드러나지 않도록 하여 정보를 은닉하고 보호할 수 있음.
+  - 데이터와 기능을 하나로 묶어 관리하므로 각각의 객체는 독립적인 역할을 할 수 있음.
+  
+2. 상속성 (Inheritance)
+  - 하나의 클래스가 가진 특징(멤버 데이터 및 멤버 함수)을 다른 클래스가 그대로 물려받을 수 있는 것.
+  - 이미 작성된 클래스를 활용하여 새로운 특징을 추가한 클래스를 만들 수 있어 기존 코드의 재활용성이 높아짐.
+
+3. 다형성 (Polymorphism)
+  - 약간 다른 방식으로 동작하는 함수를 동일한 함수 명으로 호출하는 것.
+    또는, 동일한 명령의 해석을 연결된 객체 또는 데이터에 의존하는 것
+  - ex. 오버라이딩, 오버로딩
+
+4. 추상화 (Abstraction)
+  - 객체들의 공통적인 특징 (데이터 또는 함수)를 도출하는 것.
+  - 도출된 공통적인 특징을 바탕으로 클래스를 정의하고, 클래스를 바탕으로 세부 객체를 만들어 나감.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+예제 코드를 짜며 공부를 좀 하다보니 예전에 대학생때 공부했던 내용들이 떠올랐다. 차량 동역학 및 에너지 제어 연구실에서 학부 연구생 활동을 하며 매트랩/시뮬링크로 차량 동역학 모델을 (엔진부터 바퀴까지) 만들고, 외부 조건들을 변화시켜가며 차량의 거동을 시뮬레이션하곤 했었는데, 그때 했던 것이 딱 객체 지향의 캡슐화와 추상화 내용이었던 것이다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;차량-동역학-시뮬링크-모델로-보는-객체-지향&quot;&gt;차량 동역학 시뮬링크 모델로 보는 객체 지향&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;차량-동역학-시뮬링크-모델&quot;&gt;차량 동역학 시뮬링크 모델&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/assets/img/posts/simulink_1.png&quot; width=&quot;90%&quot; height=&quot;90%&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+위 캡쳐는 도로의 경사도가 차량 주행 성능에 영향을 미치는 것을 시뮬레이션하기 위한 시뮬링크 모델이다.(학부 3학년 겨울방학에 인턴 과제를 위해 만들었는데 오랜만에 다시 열어봤다.) 제어기 모델(Controller)과 차량 모델(My Car), 두가지 객체가 정의되어 있다. 각 객체는 서로 상대 객체가 어떻게 작동하는지 알 필요는 없으며, 제어기는 목표 차속과 현재 차속 그리고 도로의 경사도만 입력으로 받아 차량 속도 제어에 필요한 악셀 페달과 브레이크 페달의 값만 계산한다. 차량 모델은 제어기가 어떤 원리로 작동하는지 알 필요는 없으며 그냥 차량 동역학 모델에 맞게 현재 차량의 속도만 계산해서 출력하면 되는 것이다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/assets/img/posts/simulink_2.png&quot; width=&quot;90%&quot; height=&quot;90%&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;차량 시스템을 열어보면 위 캡쳐와 같은데, 차량 동역학적인 부분과 엔진 부분이 나뉜다. 차량 동역학 부분은 중력, 타이어와 바닥 사이의 마찰력, 엔진에서 부터 전달받은 구동 토크 등을 종합하여 최종적으로 F=ma 를 이용해 가속도를 구하고 속력을 계산한다. 엔진은 현재 RPM과 악셀 페달 수치, 차속을 입력으로 받아 출력 토크와 출력 RPM을 계산한다. 
+&lt;br /&gt;
+이때에도 엔진 부분과 차량 부분 사이에는 각자 필요한 정보만 정의된 인터페이스 내에서 주고 받으면 되고, 세부적으로 어떻게 작동할지는 전혀 상관이 없다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/assets/img/posts/simulink_3.png&quot; width=&quot;90%&quot; height=&quot;90%&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+엔진 시스템을 다시 또 열어서 자세히 살펴보면, 엔진과 토크컨버터 모델, AT 기어 변속 로직, 트랜스미션 모델 등으로 나눌 수 있다. 여기서도 마찬가지로 각 모델들이 어떻게 입력값을 출력값으로 계산하는지는 상관없으며 서로 정의된 인터페이스 내에서 각각 역할만 다해주면 된다.
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;차량-모델로-보는-객체지향&quot;&gt;차량 모델로 보는 객체지향&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;
+그리고 이렇게 정의된 시스템과 그 안의 세부적인 서브 시스템들은 내부 파라미터만 변경하여 비슷하지만 다른 모델로 변경할 수 있다. 똑같은 자동차이지만 엔진 출력과 제동 성능을 높여 스포츠가를 만들 수도 있고, 반응성은 조금 떨어질지라도 엔진의 최적 구동 상태를 가능한 유지하도록 해 연비가 높은 자동차를 만들 수도 있는 것이다. 한번만 모델을 잘 설계해두면 그 뒤로는 다양하게 자동차의 거동을 시뮬레이션 할 수 있게 된다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+차량 모델을 처음부터 한번 짜는게 어려웠지 한번 만든 이후로는 차종별로 무게중심과 엔진맵, 타이어 마찰 계수 같은 것을 바꿔가며 시뮬레이션을 엄청 돌려봤던 기억이 난다. 저 시절에는 객체 지향이라는 개념을 전혀 몰랐지만 사실 이게 바로 객체 지향이었구나 하는 생각을 요즘 하고 있다. (지금 돌이켜 생각해보니 교수님이 이게 객체 지향이다라는 말씀을 하셨던 것 같기도 하고..)
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 캡슐화 (Encapsulation)
+  - 엔진이나 차량 무게 중심 등 차량의 디테일한 파라미터들은 외부에 드러나지 않지만, 시뮬레이션 시 차량 모델을 사용할 수 있음.
+  
+2. 상속성 (Inheritance)
+  - 한번 구현된 차량 모델을 그대로 복사해서 일부 파라미터를 수정하거나 다른 기능을 덧붙여 새로운 차량을 만들 수 있음.
+
+3. 다형성 (Polymorphism)
+  - 정확한 비유는 아닌 것 같지만, 일부 기능은 입력값이나 기존 상태에 따라 기능이 일부 바뀌는 경우도 있음.
+
+4. 추상화 (Abstraction)
+  - 각 모듈 사이에 인터페이스만 명확히 정의되어 있으면, 서로 상대의 상세한 구현 내용은 몰라도 상관없으며, 그러한 기능들을 묶어 더 큰 기능을 만들 수 있음.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이렇게 예전에 배웠던 개념에 빗대어 객체 지향을 이해하려고 하니 더 흥미롭기도 하고 이해도 잘 되었다. 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;객체-지향-프로그래밍의-장점-단점&quot;&gt;객체 지향 프로그래밍의 장점? 단점?&lt;/h1&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+객체 지향 프로그래밍을 통해 소프트웨어의 생산성 향상, 실세계에 대한 쉬운 모델링 등이 가능하다고 한다. 그리고 경우에 따라서는 보안성이 높아질 수도 있다고 한다. 차량 모델을 생각해보면 다 맞는 말이다. 대신 메모리 공간이나 실행 속도에 대해서는 좀 더 손해를 볼 수도 있다고 한다. 임베디드 제어기에 들어가는 SW 도 실시간성 때문에 객체 지향은 포기하고 C언어로 하드 코딩 경우도 많은 것을 보면 알 수 있다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;객체-지향의-법칙&quot;&gt;객체 지향의 법칙&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;
+SOLID (SRP, OCP, LSP, ISP, DIP) 라고 하는, 객체 지향 SW 설계 시 고려해야 할 중요한 원칙들이 있다고 한다. 이는 다음에 다시 정리해봐야겠다.
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Jul 2022 13:05:23 +0000</pubDate>
+        <link>https://bs-kim-dev.github.io//blog/20220712_1/</link>
+        <guid isPermaLink="true">https://bs-kim-dev.github.io//blog/20220712_1/</guid>
+      </item>
+    
+      <item>
+        <title>Github 블로그 개설 (Devlog &amp; Portfolio)</title>
+        <description>&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;2022년-07월-프로그래밍-공부를-본격적으로-시작하며-github-개설했습니다&quot;&gt;2022년 07월 프로그래밍 공부를 본격적으로 시작하며 Github 개설했습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;기계공학-학사-졸업-후-설계-일을-하다-보니-프로그래밍에-익숙하지는-않지만-최근-많은-관심이-생겨-공부를-하고-있습니다&quot;&gt;기계공학 학사 졸업 후 설계 일을 하다 보니 프로그래밍에 익숙하지는 않지만, 최근 많은 관심이 생겨 공부를 하고 있습니다.😁&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1-cc-embedded-system-signal-processing&quot;&gt;1) C/C++, Embedded System, Signal Processing&lt;/h3&gt;
+&lt;h6 id=&quot;현재-자동차-회사에서-자율주행-부문-차량-설계-엔지니어로-일하고-있습니다&quot;&gt;현재 자동차 회사에서 자율주행 부문 차량 설계 엔지니어로 일하고 있습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;hw--sw-요구사양-기반으로-차량에-적용되는-부품과-시스템의-사양-및-개발-일정-관리-업무를-주로-해왔습니다&quot;&gt;HW / SW 요구사양 기반으로 차량에 적용되는 부품과 시스템의 사양 및 개발 일정 관리 업무를 주로 해왔습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;센서-신호처리-차량-임베디드-sw-개발-업무를-새롭게-진행하게-되어&quot;&gt;센서 신호처리 차량 임베디드 SW 개발 업무를 새롭게 진행하게 되어,&lt;/h6&gt;
+&lt;h6 id=&quot;cc-및-자료구조-임베디드-시스템-관련-학습-내용들을-정리하고자-합니다&quot;&gt;C/C++ 및 자료구조, 임베디드 시스템 관련 학습 내용들을 정리하고자 합니다.&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-python-deep-learning&quot;&gt;2) Python, Deep Learning&lt;/h3&gt;
+&lt;h6 id=&quot;취미로-머신러닝--딥러닝-관련-공부를-알음알음-해왔으나-본업이-아니다보니-겉핥기-식-이론-공부만-띄엄띄엄-해왔습니다&quot;&gt;취미로 머신러닝 / 딥러닝 관련 공부를 알음알음 해왔으나, 본업이 아니다보니 겉핥기 식 이론 공부만 띄엄띄엄 해왔습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;기초부터-탄탄하게-다시-학습하고-주요-논문-및-예제들을-구현해보며-학습-내용을-정리해두겠습니다&quot;&gt;기초부터 탄탄하게 다시 학습하고, 주요 논문 및 예제들을 구현해보며 학습 내용을 정리해두겠습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;cnn-부터-트랜스포머까지-중요한-모델들-스터디-먼저-진행한-후-관심-분야-스터디를-해보려고-합니다&quot;&gt;CNN 부터 트랜스포머까지 중요한 모델들 스터디 먼저 진행한 후 관심 분야 스터디를 해보려고 합니다.&lt;/h6&gt;
+&lt;h6 id=&quot;관심-분야--시계열-데이터-처리-모델-경량화임베디드-환경에서-c로-구현-active-learning-neural-architecture-search-등&quot;&gt;관심 분야 : 시계열 데이터 처리, 모델 경량화(+임베디드 환경에서 C++로 구현), Active Learning, Neural Architecture Search 등&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-python-financial-engineering-reinforcement-learning&quot;&gt;3) Python, Financial Engineering, Reinforcement Learning&lt;/h3&gt;
+&lt;h6 id=&quot;취미-겸-재태크-목적으로-강화학습으로-트레이딩하는-봇을-만들어보고자-알음알음-강화학습-이론-공부를-해왔습니다&quot;&gt;취미 겸 재태크 목적으로 강화학습으로 트레이딩하는 봇을 만들어보고자 알음알음 강화학습 이론 공부를 해왔습니다.&lt;/h6&gt;
+&lt;h6 id=&quot;아직-실제-구현은-거의-못해봤는데-구현을-위한-스터디를-본격적으로-해보려고-합니다&quot;&gt;아직 실제 구현은 거의 못해봤는데, 구현을 위한 스터디를 본격적으로 해보려고 합니다.&lt;/h6&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;-가치관에-대한-글들은-네이버-블로그에-올리고-있습니다-투자-사업-세상-살이에-대한-짧은-생각-등&quot;&gt;🤔 가치관에 대한 글들은 네이버 블로그에 올리고 있습니다. (투자, 사업, 세상 살이에 대한 짧은 생각 등)&lt;/h5&gt;
+&lt;h5 id=&quot;httpsblognavercombumsu0426&quot;&gt;https://blog.naver.com/bumsu0426&lt;/h5&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--
+**BS-Kim-Dev/BS-Kim-Dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+--&gt;
+</description>
+        <pubDate>Sun, 10 Jul 2022 10:35:23 +0000</pubDate>
+        <link>https://bs-kim-dev.github.io//blog/20220710_1/</link>
+        <guid isPermaLink="true">https://bs-kim-dev.github.io//blog/20220710_1/</guid>
+      </item>
+    
+
+    
+      
+        
+      
+    
+      
+        
+          <item>
+            <title>Cpp</title>
+            <description>&lt;h5&gt; Posts by Category : Cpp &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/Cpp/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>DeepLearning</title>
+            <description>&lt;h5&gt; Posts by Category : DeepLearning &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;10 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/DeepLearning/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Finance</title>
+            <description>&lt;h5&gt; Posts by Category : Finance &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;10 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/Finance/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Github</title>
+            <description>&lt;h5&gt; Posts by Category : Github &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;10 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/Github/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>OOP</title>
+            <description>&lt;h5&gt; Posts by Category : OOP &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;12 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220712_1/&quot;&gt;객체 지향에 대해&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/OOP/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Python</title>
+            <description>&lt;h5&gt; Posts by Category : Python &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;10 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/Python/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>ReinforcementLearning</title>
+            <description>&lt;h5&gt; Posts by Category : ReinforcementLearning &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;10 Jul 2022&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/li&gt;
+
+&lt;/div&gt;
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/ReinforcementLearning/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;   &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#Github&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/Github&quot;&gt;Github&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;Github&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#C++&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/C++&quot;&gt;C++&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;C++&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#Python&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/Python&quot;&gt;Python&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;Python&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#DeepLearning&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/DeepLearning&quot;&gt;DeepLearning&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;DeepLearning&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#ReinforcementLearning&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/ReinforcementLearning&quot;&gt;ReinforcementLearning&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;ReinforcementLearning&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#Finance&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/Finance&quot;&gt;Finance&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;Finance&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220710_1/&quot;&gt;Github 블로그 개설 (Devlog &amp;amp; Portfolio)&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;category-box&quot;&gt;
+    
+    &lt;div id=&quot;#OOP&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;/Devlog/categories/OOP&quot;&gt;OOP&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;OOP&quot;&gt;&lt;/a&gt;
+     
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6&gt;&lt;a href=&quot;/blog/20220712_1/&quot;&gt;객체 지향에 대해&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</description>
+            <link>https://bs-kim-dev.github.io//Devlog/categories/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Get Started</title>
+            <description>## Getting Started - How to use “devlopr-jekyll” theme
+
+## What's Jekyll ?
+
+If you aren’t familiar with Jekyll yet, you should know that it is a static site generator. It will transform your plain text into static websites and blogs. No more databases, slow loading websites, risk of being hacked…just your content. And not only that, with Jekyll you get free hosting with GitHub Pages! If you are a beginner we recommend you start with [Jekyll’s Docs](https://jekyllrb.com/docs/installation/). Now, if you know how to use Jekyll, let’s move on to using this theme in Jekyll:
+
+## Watch Tutorial
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cXBEfpn0qrg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+### Steps to create your blog using devlopr-jekyll and Host using Github Pages :
+
+&gt;  **Step 1.**  Fork the repo - [click here](https://github.com/sujaykundu777/devlopr-jekyll/fork)
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork1.PNG){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 2.** Use **your-github-username.github.io** as the new repo  ( Replace your-github-username with yours). Remember if you use the name other than your-github-username.github.io , your blog will be built using gh-pages branch.
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork2.PNG){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork3.PNG){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 3.** Clone the new repo locally to make changes :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork31.PNG){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork32.PNG){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork33.PNG){:class=&quot;img-fluid&quot;}
+
+```bash
+ $ git clone https://github.com/yourusername/yourusername.github.io
+ $ cd yourusername.github.io
+ $ code .
+```
+
+&gt; **Step 4.** Open the files using VSCode and edit _config.yml and edit with your details:
+
+- _config.yml file - replace with your own details
+- _posts - Add your blog posts here
+- _includes - You can replace the contents of the files with your data. (contains widgets)
+- _assets/img - Add all your images here
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork34.PNG){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 5** - Install the development requirements:
+
+### Set up local development environment
+
+1. [Git](https://git-scm.com/)
+2. [Ruby](https://www.ruby-lang.org/) and [Bundler](https://bundler.io/)
+3. [VSCode](https://code.visualstudio.com/download)
+
+We need ruby and bundler to build our site locally. After installation check if its working:
+
+For ruby :
+
+```bash
+$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
+```
+For bundler :
+
+```bash
+$ gem install bundler
+$ bundler -v
+Bundler version 2.2.29
+```
+Add jekyll :
+
+```bash
+$ bundle update
+$ bundle add jekyll
+```
+ This command will add the Jekyll gem to our Gemfile and install it to the ./vendor/bundle/ folder.
+
+You can check the jekyll version
+
+```
+$ bundle exec jekyll -v
+jekyll 4.2.0
+```
+
+&gt; **Step 6.** Install the gem dependencies by running the following command
+
+```bash
+$ bundle update
+$ bundle install
+```
+
+&gt; **Step 7.** Serve the site locally by running the following command below:
+
+```bash
+$ bundle exec jekyll serve --watch
+```
+or you can also serve using :
+
+```bash
+$ jekyll serve
+```
+
+Visit [http://localhost:4000](http://localhost:4000) for development server
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork41.PNG){:class=&quot;img-fluid&quot;}
+
+
+### Adding Content
+
+Start populating your blog by adding your .md files in _posts. devlopr-jekyll already has a few examples.
+
+#### YAML Post Example:
+
+```yml
+---
+layout: post
+title: Sample Post
+author: Sujay Kundu
+date: '2019-05-21 14:35:23 +0530'
+category:
+        - jekyll
+summary: This is the summary for the sample post
+thumbnail: sample.png
+---
+
+Hi ! This is sample post.
+
+```
+
+#### YAML Page Example:
+
+```yml
+---
+layout: page
+title: Sample Page
+permalink: /sample-page/
+---
+
+Hi ! This is sample page.
+```
+
+#### Editing stylesheet
+
+You’ll only work with a single file to edit/add theme style: assets/css/main.scss.
+
+### Deploy your Changes
+
+Once happy with your blog changes. Push your changes to master branch.
+
+&gt; **Step 8.** Push Your Local Changes
+
+```bash
+ $ git add .
+ $ git commit -m &quot;my new blog using devlopr-jekyll&quot;
+ $ git push origin master
+```
+
+Visit your Github Repo settings ! Enable master branch as Github Pages Branch :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork6.PNG){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 9.** Deploy your Blog :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork7.PNG){:class=&quot;img-fluid&quot;}
+
+&gt; Congrats ! On your new shining Blog !
+
+You can visit the blog using [http://your-github-username.github.io](http://your-github-username.github.io).
+
+</description>
+            <link>https://bs-kim-dev.github.io//get-started/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Styleguide</title>
+            <description>### devlopr - Styleguide
+
+&lt;hr /&gt;
+
+ &lt;img src=&quot;/assets/img/styleguide.png&quot; class=&quot;img-fluid&quot;&gt;
+
+&lt;p&gt; Lets try the different text styles  &lt;b&gt; Bold &lt;/b&gt; , &lt;strong&gt; Strong &lt;/strong&gt;, &lt;em&gt; Emphasis &lt;/em&gt;, &lt;i&gt; Italic &lt;/i&gt; &lt;/p&gt;
+
+
+&lt;p&gt; Now, lets try different heading styles : &lt;/p&gt;
+
+&lt;h1&gt; Hello in h1 ! &lt;/h1&gt;
+&lt;h2&gt; Hello in h2 ! &lt;/h2&gt;
+&lt;h3&gt; Hello in h3 ! &lt;/h3&gt;
+&lt;h4&gt; Hello in h4 ! &lt;/h4&gt;
+&lt;h5&gt; Hello in h5 ! &lt;/h5&gt;
+&lt;h6&gt; Hello in h6 ! &lt;/h6&gt;
+
+&lt;hr /&gt;
+&lt;p&gt; Unordered List &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; Ordered List &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a Block Quote,  It can Expand Multiple Lines &lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text. &lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt; This line of text is meant to be deleted text &lt;/del&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;attribute&quot;&gt;attr&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot; class=&quot;initialism&quot;&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+&lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt; Instagram Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned data-instgrm-permalink=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; data-instgrm-version=&quot;13&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:16px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;&quot; target=&quot;_blank&quot;&gt; &lt;div style=&quot; display: flex; flex-direction: row; align-items: center;&quot;&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: column; flex-grow: 1; justify-content: center;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 19% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display:block; height:50px; margin:0 auto 12px; width:50px;&quot;&gt;&lt;svg width=&quot;50px&quot; height=&quot;50px&quot; viewBox=&quot;0 0 60 60&quot; version=&quot;1.1&quot; xmlns=&quot;https://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;https://www.w3.org/1999/xlink&quot;&gt;&lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g transform=&quot;translate(-511.000000, -20.000000)&quot; fill=&quot;#000000&quot;&gt;&lt;g&gt;&lt;path d=&quot;M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div style=&quot;padding-top: 8px;&quot;&gt; &lt;div style=&quot; color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;&quot;&gt; View this post on Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 12.5% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;&quot;&gt;&lt;div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: 8px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: auto;&quot;&gt; &lt;div style=&quot; width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/CBXO7AypXkM/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Sujay (@sujaykundu777)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt; Twitter Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I just published “Deploying a blog using Jekyll and Github Pages with SSL certificate for Free” &lt;a href=&quot;https://t.co/B3T3IQVU93&quot;&gt;https://t.co/B3T3IQVU93&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sujay Kundu (@SujayKundu777) &lt;a href=&quot;https://twitter.com/SujayKundu777/status/1012601950469160962?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+
+&lt;h3&gt;YouTube Responsive Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bBpKMH3nBzE?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Vimeo Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/212114694?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;ted-responsive-embed&quot;&gt;TED Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://embed.ted.com/talks/ted_halstead_a_climate_solution_where_all_sides_can_win&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;twitch-responsive-embed&quot;&gt;Twitch Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.twitch.tv/?autoplay=false&amp;amp;video=v248755437&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; height=&quot;378&quot; width=&quot;620&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;soundcloud-embed&quot;&gt;SoundCloud Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/29738591&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;codepen-embed&quot;&gt;CodePen Embed&lt;/h3&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;YWvpRo&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;kharrop&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Referral Form&quot; class=&quot;codepen&quot;&gt;&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;syntax-highlighting&quot;&gt;Syntax Highlighting&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'markdown'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toHTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can add inline code just like this, E.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.code { color: #fff; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f4f4f4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-gist-embed&quot;&gt;GitHub gist Embed&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/ahmadajmi/dbb4f713317721668bcbc39420562afc.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;input-style&quot;&gt;Input Style&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&quot;text&quot; placeholder=&quot;I'm an input field!&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+
+</description>
+            <link>https://bs-kim-dev.github.io//styleguide/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+
+  </channel>
+</rss>
